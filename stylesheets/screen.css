@@ -126,9 +126,21 @@ section {
     bottom: 0; }
   @media screen and (max-width: 599px) {
     .grid-8, .grid-8-last {
+      position: relative;
       float: none;
       clear: both;
-      width: 100%; } }
+      width: 100%; }
+      .grid-8:before, .grid-8-last:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 56.25%; }
+      .grid-8 > .content, .grid-8-last > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
 
 .grid-8-last {
   margin-right: 0; }
@@ -169,14 +181,22 @@ p {
     padding: 0; }
     @media screen and (max-width: 599px) {
       .label h2 {
-        font-size: 4vw; } }
+        font-size: 16px; } }
+    @media screen and (max-width: 340px) {
+      .label h2 {
+        font-size: 14px; } }
   .label p {
     font-size: 1.5vw;
     margin: 0.3em 0.8em 0.8em;
     padding: 0; }
     @media screen and (max-width: 599px) {
       .label p {
-        font-size: 4vw; } }
+        font-size: 14px; } }
+    @media screen and (max-width: 340px) {
+      .label p {
+        font-size: 12px; } }
+  .label span {
+    opacity: 0.7; }
 
 .content-intro .content {
   padding: 1vw 2vw; }
@@ -188,14 +208,20 @@ p {
     margin-top: 0.6vw; }
     @media screen and (max-width: 599px) {
       .content-intro .content p {
-        font-size: 4vw; } }
+        font-size: 16px; } }
+    @media screen and (max-width: 340px) {
+      .content-intro .content p {
+        font-size: 14px; } }
   .content-intro .content h2 {
     font-weight: 500;
     margin-bottom: 0;
     font-size: 1.5vw; }
     @media screen and (max-width: 599px) {
       .content-intro .content h2 {
-        font-size: 4vw; } }
+        font-size: 16px; } }
+    @media screen and (max-width: 340px) {
+      .content-intro .content h2 {
+        font-size: 14px; } }
   .content-intro .content a {
     color: #fff;
     font-weight: 500;
@@ -225,10 +251,10 @@ p {
     overflow: hidden; }
 
 .content-quote .content {
-  padding: 2vw 1vw 1vw 1.5vw; }
+  padding: 2vw 1vw 1vw 1.8vw; }
   @media screen and (max-width: 599px) {
     .content-quote .content {
-      padding: 3vw; } }
+      padding: 15px 28px; } }
   .content-quote .content .quote {
     font-weight: 300;
     font-size: 1.6vw;
@@ -245,9 +271,14 @@ p {
         background-size: 18px 12px; } }
     @media screen and (max-width: 599px) {
       .content-quote .content .quote {
-        padding: 0 1vw 0 3vw;
-        font-size: 4vw;
+        padding: 0;
+        text-indent: 18px;
+        font-size: 16px;
+        background-position: left 3px;
         background-size: 12px 8px; } }
+    @media screen and (max-width: 340px) {
+      .content-quote .content .quote {
+        font-size: 14px; } }
     .content-quote .content .quote .quotation {
       display: inline-block;
       height: 16px;
@@ -278,12 +309,15 @@ p {
     text-decoration: none; }
     @media screen and (max-width: 599px) {
       .content-quote .content .person {
-        font-size: 3vw;
+        font-size: 14px;
         position: relative;
         display: block;
         bottom: auto;
         left: auto;
-        padding: 0 0 3vw 3vw; } }
+        padding: 0 0 10px 0; } }
+    @media screen and (max-width: 340px) {
+      .content-quote .content .person {
+        font-size: 12px; } }
     .content-quote .content .person span {
       color: #949494; }
 

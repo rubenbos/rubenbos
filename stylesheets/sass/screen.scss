@@ -5,7 +5,8 @@
 // Variables
 
 $default: new-breakpoint(min-width 600px);
-$mobile: new-breakpoint(max-width 599px);
+$small: new-breakpoint(max-width 599px);
+$extrasmall: new-breakpoint(max-width 340px);
 
 // Mixins
 
@@ -68,7 +69,7 @@ section {
 	@include media($default) {
 		@include aspect-ratio(1, 1);
 	}
-	@include media($mobile) {
+	@include media($small) {
 		width: 100%;
 		position: relative;
 	}
@@ -78,7 +79,7 @@ section {
 }
 
 .grid-block {
-	@include media($mobile) {
+	@include media($small) {
 		@include aspect-ratio(16, 9);
     }
 }
@@ -88,7 +89,9 @@ section {
 	margin-bottom: 2vw;
 	background: #231F20;
 	@include aspect-ratio(10000, 4819);
-	@include media($mobile) {
+	@include media($small) {
+		@include aspect-ratio(16, 9);
+
 		float: none;
 		clear: both;
 		width: 100%;
@@ -107,7 +110,7 @@ h1.title {
 	margin: 1em 0 0.2em 0.4em;
 	padding: 0;
 	overflow: hidden;
-	@include media($mobile) {
+	@include media($small) {
 		font-size: 4.5vw;
 	}
 	span {
@@ -144,17 +147,26 @@ p {
 		font-size: 1.5vw;
 		margin: 0.8em 0.8em 0.3em;
 		padding: 0;
-		@include media($mobile) {
-			font-size: 4vw;
+		@include media($small) {
+			font-size: 16px;
+		}
+		@include media($extrasmall) {
+			font-size: 14px;
 		}
 	}
 	p {
 		font-size: 1.5vw;
 		margin: 0.3em 0.8em 0.8em;
 		padding: 0;
-		@include media($mobile) {
-			font-size: 4vw;
+		@include media($small) {
+			font-size: 14px;
 		}
+		@include media($extrasmall) {
+			font-size: 12px;
+		}
+	}
+	span {
+		opacity: 0.7;
 	}
 }
 
@@ -163,22 +175,28 @@ p {
 .content-intro {
 	.content {
 		padding: 1vw 2vw;
-		@include media($mobile) {
+		@include media($small) {
 			padding: 3vw 6vw;
 		}
 		p {
 			font-size: 1.3vw;
 			margin-top: 0.6vw;
-			@include media($mobile) {
-				font-size: 4vw;
+			@include media($small) {
+				font-size: 16px;
+			}
+			@include media($extrasmall) {
+				font-size: 14px;
 			}
 		}
 		h2 {
 			font-weight: 500;
 			margin-bottom: 0;
 			font-size: 1.5vw;
-			@include media($mobile) {
-				font-size: 4vw;
+			@include media($small) {
+				font-size: 16px;
+			}
+			@include media($extrasmall) {
+				font-size: 14px;
 			}
 		}
 		a {
@@ -224,9 +242,9 @@ p {
 
 .content-quote {
 	.content {
-		padding: 2vw 1vw 1vw 1.5vw;
-		@include media($mobile) {
-			padding: 3vw;
+		padding: 2vw 1vw 1vw 1.8vw;
+		@include media($small) {
+			padding: 15px 28px;
 		}
 		.quote {
 			font-weight: 300;
@@ -242,10 +260,15 @@ p {
 			@media (min-width: 850px) and (max-width: 1100px) {
 				background-size: 18px 12px;
 			}
-			@include media($mobile) {
-				padding: 0 1vw 0 3vw;
-				font-size: 4vw;
+			@include media($small) {
+				padding: 0;
+				text-indent: 18px;
+				font-size: 16px;
+				background-position: left 3px;
 				background-size: 12px 8px;
+			}
+			@include media($extrasmall) {
+				font-size: 14px;
 			}
 			.quotation {
 				display: inline-block;
@@ -263,7 +286,7 @@ p {
 				@media (min-width: 850px) and (max-width: 1100px) {
 					background-size: 18px 12px;
 				}
-				@include media($mobile) {
+				@include media($small) {
 					background-size: 12px 8px;
 					margin: 0;
 				}
@@ -277,13 +300,16 @@ p {
 			left: 3.5vw;
 			color: #fff;
 			text-decoration: none;
-			@include media($mobile) {
-				font-size: 3vw;
+			@include media($small) {
+				font-size: 14px;
 				position: relative;
 				display: block;
 				bottom: auto;
 				left: auto;
-				padding: 0 0 3vw 3vw;
+				padding: 0 0 10px 0;
+			}
+			@include media($extrasmall) {
+				font-size: 12px;
 			}
 			span {
 				color: #949494;
