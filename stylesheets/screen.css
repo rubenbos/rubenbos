@@ -5,7 +5,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: "Gotham Rounded"; }
+  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica Neue, Helvetica, Arial; }
 
 .wrapper {
   padding-left: 1.5vw;
