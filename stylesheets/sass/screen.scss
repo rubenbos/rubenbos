@@ -133,19 +133,15 @@ p {
 // Default elements
 
 .label {
-	//@include aspect-ratio(4, 1);
 	background: #231F20;
 	position: absolute;
 	bottom: 1em;
 	left: 1em;
-	//min-width: 20vmin;
-	//width: 85%;
 	max-width: 85%;
-	// max-height: 5vw;
 	color: #fff;
 	h2 {
 		font-size: 1.5vw;
-		margin: 0.8em 0.8em 0.3em;
+		margin: 0.8em 0.8em 0.3em 0.8em;
 		padding: 0;
 		@include media($small) {
 			font-size: 16px;
@@ -156,7 +152,7 @@ p {
 	}
 	p {
 		font-size: 1.5vw;
-		margin: 0.3em 0.8em 0.8em;
+		margin: 0.3em 0.8em 0.8em 0.8em;
 		padding: 0;
 		@include media($small) {
 			font-size: 14px;
@@ -412,5 +408,3 @@ p {
 		}
 	}
 }
-
-
