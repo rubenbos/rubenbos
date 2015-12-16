@@ -1,0 +1,390 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
+// Variables
+
+$default: new-breakpoint(min-width 600px);
+$mobile: new-breakpoint(max-width 599px);
+
+// Mixins
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Main
+
+body {
+	font-family: "Gotham Rounded"
+}
+
+.wrapper {
+	padding-left: 1.5vw;
+	padding-right: 1.5vw;
+}
+
+header, footer {
+	@include outer-container(1400px);
+}
+
+section {
+	margin-top: 1.5vw;
+	margin-bottom: 1.5vw;
+}
+
+// GRID
+
+.row {
+	@include outer-container(1400px);
+}
+
+.grid-12 {
+	@include span-columns(12);
+	@include omega;
+	margin-bottom: 2vw;
+	background: #231F20;
+	@include aspect-ratio(16, 9);
+}
+
+.grid-4, .grid-4-last {
+	@include span-columns(4);
+	background: #231F20;
+	margin-bottom: 2vw;
+	color: white;
+	@include media($default) {
+		@include aspect-ratio(1, 1);
+	}
+	@include media($mobile) {
+		width: 100%;
+		position: relative;
+	}
+}
+.grid-4-last {
+	 margin-right: 0;
+}
+
+.grid-block {
+	@include media($mobile) {
+		@include aspect-ratio(16, 9);
+    }
+}
+
+.grid-8, .grid-8-last {
+	@include span-columns(8);
+	margin-bottom: 2vw;
+	background: #231F20;
+	@include aspect-ratio(10000, 4819);
+	@include media($mobile) {
+		float: none;
+		clear: both;
+		width: 100%;
+    }
+}
+.grid-8-last {
+	 @include omega;
+}
+
+// Default styles
+
+h1.title {
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 2.4em;
+	margin: 1em 0 0.2em 0.4em;
+	padding: 0;
+	overflow: hidden;
+	@include media($mobile) {
+		font-size: 4vw;
+	}
+	span {
+		color: #5D5D5D;
+		margin-left: 1em;
+	}
+	-webkit-font-smoothing: antialiased;
+}
+
+h2 {
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	font-weight: 100;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Default elements
+
+.label {
+	//@include aspect-ratio(4, 1);
+	background: #231F20;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	//min-width: 20vmin;
+	//width: 85%;
+	max-width: 85%;
+	// max-height: 5vw;
+	color: #fff;
+	h2 {
+		font-size: 1.5vw;
+		margin: 0.8em 0.8em 0.3em;
+		padding: 0;
+		@include media($mobile) {
+			font-size: 3vw;
+		}
+	}
+	p {
+		font-size: 1.5vw;
+		margin: 0.3em 0.8em 0.5em;
+		padding: 0;
+		@include media($mobile) {
+			font-size: 3vw;
+		}
+	}
+}
+
+// Content
+
+.content-intro {
+	.content {
+		padding: 1vw 2vw;
+		@include media($mobile) {
+			padding: 3vw 6vw;
+		}
+		p {
+			font-size: 1.3vw;
+			margin-top: 0.6vw;
+			@include media($mobile) {
+				font-size: 3vw;
+			}
+		}
+		h2 {
+			font-weight: 500;
+			margin-bottom: 0;
+			font-size: 1.5vw;
+			@include media($mobile) {
+				font-size: 3vw;
+			}
+		}
+		a {
+			color: #fff;
+			font-weight: 500;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+			span {
+				display: block;
+				font-weight: 200;
+			}
+		}
+		.button {
+			color: #000;
+			clear: both;
+			text-decoration: none;
+			border: 0.2vw solid #fff;
+			padding: 1vw 1vw;
+			line-height: 3vw;
+		}
+	}
+}
+
+.content-profile {
+	background-image: url('../images/img_rubenbos_profile.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	.label {
+		left: auto;
+		right: 1em;
+
+	}
+	a {
+		&:hover .label .content {
+		background:rgba(0,0,0,0.7);
+		overflow: hidden;
+		}
+	}
+
+}
+
+.content-quote {
+	.content {
+		padding: 2vw 1vw 1vw 1.5vw;
+		@include media($mobile) {
+			padding: 3vw;
+		}
+		.quote {
+			font-weight: 300;
+			font-size: 1.6vw;
+			background-image: url('../images/assets/bg_quotation_left.png');
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-size: 23px 16px;
+			padding: 0 2vw 0 2vw;
+			@media (min-width: 600px) and (max-width: 850px) {
+				background-size: 12px 8px;
+			}
+			@media (min-width: 850px) and (max-width: 1100px) {
+				background-size: 18px 12px;
+			}
+			@include media($mobile) {
+				padding: 0 1vw 0 3vw;
+				font-size: 3vw;
+				background-size: 12px 8px;
+			}
+			.quotation {
+				display: inline-block;
+				height: 16px;
+				width: 23px;
+				overflow: hidden;
+				background-image: url('../images/assets/bg_quotation_right.png');
+				background-repeat: no-repeat;
+				background-position: bottom;
+				background-size: 23px 16px;
+				margin-left: 10px;
+				@media (min-width: 600px) and (max-width: 850px) {
+					background-size: 12px 8px;
+				}
+				@media (min-width: 850px) and (max-width: 1100px) {
+					background-size: 18px 12px;
+				}
+				@include media($mobile) {
+					background-size: 12px 8px;
+					margin: 0;
+				}
+			}
+		}
+		.person {
+			font-weight: 200;
+			font-size: 1.2vw;
+			position: absolute;
+			bottom: 35px;
+			left: 3.5vw;
+			color: #fff;
+			text-decoration: none;
+			@include media($mobile) {
+				font-size: 3vw;
+				position: relative;
+				display: block;
+				bottom: auto;
+				left: auto;
+				padding: 0 0 1.5vw 3vw;
+			}
+			span {
+				color: #949494;
+			}
+		}
+	}
+}
+
+.content-blog {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	a {
+		width: 100%;
+		height: 100%;
+		display: block;
+		.overlay {
+			width: 100%;
+			height: 100%;
+			display: block;
+			&:after, &:before {
+				position:absolute;
+			    opacity:0;
+			    transition: all 0.5s;
+			    -webkit-transition: all 0.5s;
+			}
+			&:after {
+			    content:'\A';
+			    width:100%; height:100%;
+			    top:0; left:0;
+			    background:rgba(0,0,0,0.3);
+			}
+			&:before {
+			    width:100%;
+			    color:#fff;
+			    z-index:1;
+			    bottom:0;
+			    box-sizing:border-box;
+			    -moz-box-sizing:border-box;
+			}
+			&:hover:after, &:hover:before {
+				opacity:1;
+			}
+		}
+		&:hover .label .content {
+			background:rgba(0,0,0,0.7);
+			overflow: hidden;
+		}
+	}
+} 
+
+// When Viewport bigger than 1400 fix all 'viewport' sizes so they don't exceed bounding box
+
+@media (min-width: 1600px) {
+
+
+	.grid-12 {
+		margin-bottom: 32px;
+	}
+
+	.grid-4, .grid-4-last {
+		margin-bottom: 32px;
+	}
+	.grid-8, .grid-8-last {
+		margin-bottom: 32px;
+	}
+
+	.label {
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			font-size: 24px;
+		}
+	}
+
+	.content-intro {
+		.content {
+			padding: 20px 30px;
+			p {
+				font-size: 22px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.content-quote {
+		.content {
+			padding: 30px 10px 20px 20px;		
+			.quote {
+				font-size: 24px;
+				padding: 0 20px 0 30px;
+			}
+			.person {
+				font-size: 20px;
+				left: 50px;
+			}
+		}
+	}
+}
+
+

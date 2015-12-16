@@ -1,0 +1,358 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Gotham Rounded"; }
+
+.wrapper {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw; }
+
+header, footer {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto; }
+  header::after, footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+section {
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw; }
+
+.row {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.grid-12 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 2vw;
+  background: #231F20;
+  position: relative; }
+  .grid-12:last-child {
+    margin-right: 0; }
+  .grid-12:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .grid-12 > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.grid-4, .grid-4-last {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background: #231F20;
+  margin-bottom: 2vw;
+  color: white; }
+  .grid-4:last-child, .grid-4-last:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .grid-4, .grid-4-last {
+      position: relative; }
+      .grid-4:before, .grid-4-last:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 100%; }
+      .grid-4 > .content, .grid-4-last > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
+  @media screen and (max-width: 599px) {
+    .grid-4, .grid-4-last {
+      width: 100%;
+      position: relative; } }
+
+.grid-4-last {
+  margin-right: 0; }
+
+@media screen and (max-width: 599px) {
+  .grid-block {
+    position: relative; }
+    .grid-block:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    .grid-block > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; } }
+
+.grid-8, .grid-8-last {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-bottom: 2vw;
+  background: #231F20;
+  position: relative; }
+  .grid-8:last-child, .grid-8-last:last-child {
+    margin-right: 0; }
+  .grid-8:before, .grid-8-last:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 48.19%; }
+  .grid-8 > .content, .grid-8-last > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  @media screen and (max-width: 599px) {
+    .grid-8, .grid-8-last {
+      float: none;
+      clear: both;
+      width: 100%; } }
+
+.grid-8-last {
+  margin-right: 0; }
+
+h1.title {
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 2.4em;
+  margin: 1em 0 0.2em 0.4em;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased; }
+  @media screen and (max-width: 599px) {
+    h1.title {
+      font-size: 4vw; } }
+  h1.title span {
+    color: #5D5D5D;
+    margin-left: 1em; }
+
+h2 {
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased; }
+
+p {
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased; }
+
+.label {
+  background: #231F20;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  max-width: 85%;
+  color: #fff; }
+  .label h2 {
+    font-size: 1.5vw;
+    margin: 0.8em 0.8em 0.3em;
+    padding: 0; }
+    @media screen and (max-width: 599px) {
+      .label h2 {
+        font-size: 3vw; } }
+  .label p {
+    font-size: 1.5vw;
+    margin: 0.3em 0.8em 0.5em;
+    padding: 0; }
+    @media screen and (max-width: 599px) {
+      .label p {
+        font-size: 3vw; } }
+
+.content-intro .content {
+  padding: 1vw 2vw; }
+  @media screen and (max-width: 599px) {
+    .content-intro .content {
+      padding: 3vw 6vw; } }
+  .content-intro .content p {
+    font-size: 1.3vw;
+    margin-top: 0.6vw; }
+    @media screen and (max-width: 599px) {
+      .content-intro .content p {
+        font-size: 3vw; } }
+  .content-intro .content h2 {
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 1.5vw; }
+    @media screen and (max-width: 599px) {
+      .content-intro .content h2 {
+        font-size: 3vw; } }
+  .content-intro .content a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none; }
+    .content-intro .content a:hover {
+      text-decoration: underline; }
+    .content-intro .content a span {
+      display: block;
+      font-weight: 200; }
+  .content-intro .content .button {
+    color: #000;
+    clear: both;
+    text-decoration: none;
+    border: 0.2vw solid #fff;
+    padding: 1vw 1vw;
+    line-height: 3vw; }
+
+.content-profile {
+  background-image: url("../images/img_rubenbos_profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .content-profile .label {
+    left: auto;
+    right: 1em; }
+  .content-profile a:hover .label .content {
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden; }
+
+.content-quote .content {
+  padding: 2vw 1vw 1vw 1.5vw; }
+  @media screen and (max-width: 599px) {
+    .content-quote .content {
+      padding: 3vw; } }
+  .content-quote .content .quote {
+    font-weight: 300;
+    font-size: 1.6vw;
+    background-image: url("../images/assets/bg_quotation_left.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 23px 16px;
+    padding: 0 2vw 0 2vw; }
+    @media (min-width: 600px) and (max-width: 850px) {
+      .content-quote .content .quote {
+        background-size: 12px 8px; } }
+    @media (min-width: 850px) and (max-width: 1100px) {
+      .content-quote .content .quote {
+        background-size: 18px 12px; } }
+    @media screen and (max-width: 599px) {
+      .content-quote .content .quote {
+        padding: 0 1vw 0 3vw;
+        font-size: 3vw;
+        background-size: 12px 8px; } }
+    .content-quote .content .quote .quotation {
+      display: inline-block;
+      height: 16px;
+      width: 23px;
+      overflow: hidden;
+      background-image: url("../images/assets/bg_quotation_right.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 23px 16px;
+      margin-left: 10px; }
+      @media (min-width: 600px) and (max-width: 850px) {
+        .content-quote .content .quote .quotation {
+          background-size: 12px 8px; } }
+      @media (min-width: 850px) and (max-width: 1100px) {
+        .content-quote .content .quote .quotation {
+          background-size: 18px 12px; } }
+      @media screen and (max-width: 599px) {
+        .content-quote .content .quote .quotation {
+          background-size: 12px 8px;
+          margin: 0; } }
+  .content-quote .content .person {
+    font-weight: 200;
+    font-size: 1.2vw;
+    position: absolute;
+    bottom: 35px;
+    left: 3.5vw;
+    color: #fff;
+    text-decoration: none; }
+    @media screen and (max-width: 599px) {
+      .content-quote .content .person {
+        font-size: 3vw;
+        position: relative;
+        display: block;
+        bottom: auto;
+        left: auto;
+        padding: 0 0 1.5vw 3vw; } }
+    .content-quote .content .person span {
+      color: #949494; }
+
+.content-blog {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .content-blog a {
+    width: 100%;
+    height: 100%;
+    display: block; }
+    .content-blog a .overlay {
+      width: 100%;
+      height: 100%;
+      display: block; }
+      .content-blog a .overlay:after, .content-blog a .overlay:before {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s; }
+      .content-blog a .overlay:after {
+        content: '\A';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3); }
+      .content-blog a .overlay:before {
+        width: 100%;
+        color: #fff;
+        z-index: 1;
+        bottom: 0;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box; }
+      .content-blog a .overlay:hover:after, .content-blog a .overlay:hover:before {
+        opacity: 1; }
+    .content-blog a:hover .label .content {
+      background: rgba(0, 0, 0, 0.7);
+      overflow: hidden; }
+
+@media (min-width: 1600px) {
+  .grid-12 {
+    margin-bottom: 32px; }
+
+  .grid-4, .grid-4-last {
+    margin-bottom: 32px; }
+
+  .grid-8, .grid-8-last {
+    margin-bottom: 32px; }
+
+  .label h2 {
+    font-size: 24px; }
+  .label p {
+    font-size: 24px; }
+
+  .content-intro .content {
+    padding: 20px 30px; }
+    .content-intro .content p {
+      font-size: 22px; }
+    .content-intro .content h2 {
+      font-size: 24px; }
+
+  .content-quote .content {
+    padding: 30px 10px 20px 20px; }
+    .content-quote .content .quote {
+      font-size: 24px;
+      padding: 0 20px 0 30px; }
+    .content-quote .content .person {
+      font-size: 20px;
+      left: 50px; } }
+
+/*# sourceMappingURL=screen.css.map */
