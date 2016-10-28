@@ -229,7 +229,6 @@ p {
     .content-intro .content a:hover {
       text-decoration: underline; }
     .content-intro .content a span {
-      display: block;
       font-weight: 200; }
   .content-intro .content .button {
     color: #000;
