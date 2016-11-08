@@ -30,7 +30,7 @@ $extrasmall: new-breakpoint(max-width 340px);
 // Main
 
 body {
-	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica Neue, Helvetica, Arial;
+	font-family: 'Montserrat', Avenir, Helvetica, Arial, sans-serif;
 }
 
 .wrapper {
@@ -105,7 +105,7 @@ section {
 
 h1.title {
 	font-size: 1.8em;
-	font-weight: 300;
+	font-weight: bold;
 	line-height: 2.4em;
 	margin: 1em 0 0.2em 0.4em;
 	padding: 0;
@@ -121,12 +121,12 @@ h1.title {
 }
 
 h2 {
-	font-weight: 500;
+	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
 }
 
 p {
-	font-weight: 100;
+	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -185,7 +185,7 @@ p {
 			}
 		}
 		h2 {
-			font-weight: 500;
+			font-weight: bold;
 			margin-bottom: 0;
 			font-size: 1.5vw;
 			@include media($small) {
@@ -197,13 +197,11 @@ p {
 		}
 		a {
 			color: #fff;
-			font-weight: 500;
-			text-decoration: none;
+			font-weight: bold;
+			text-decoration: underline;
 			&:hover {
-				text-decoration: underline;
-			}
-			span {
-				font-weight: 200;
+				text-decoration: none;
+
 			}
 		}
 		.button {
@@ -242,7 +240,7 @@ p {
 			padding: 15px 28px;
 		}
 		.quote {
-			font-weight: 300;
+			font-weight: normal;
 			font-size: 1.6vw;
 			background-image: url('../images/assets/bg_quotation_left.png');
 			background-position: left top;
@@ -288,7 +286,7 @@ p {
 			}
 		}
 		.person {
-			font-weight: 200;
+			font-weight: normal;
 			font-size: 1.2vw;
 			position: absolute;
 			bottom: 35px;

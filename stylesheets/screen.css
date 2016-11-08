@@ -5,7 +5,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica Neue, Helvetica, Arial; }
+  font-family: 'Montserrat', Avenir, Helvetica, Arial, sans-serif; }
 
 .wrapper {
   padding-left: 1.5vw;
@@ -147,7 +147,7 @@ section {
 
 h1.title {
   font-size: 1.8em;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 2.4em;
   margin: 1em 0 0.2em 0.4em;
   padding: 0;
@@ -161,11 +161,11 @@ h1.title {
     margin-left: 1em; }
 
 h2 {
-  font-weight: 500;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased; }
 
 p {
-  font-weight: 100;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
 .label {
@@ -213,7 +213,7 @@ p {
       .content-intro .content p {
         font-size: 14px; } }
   .content-intro .content h2 {
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 0;
     font-size: 1.5vw; }
     @media screen and (max-width: 599px) {
@@ -224,12 +224,10 @@ p {
         font-size: 14px; } }
   .content-intro .content a {
     color: #fff;
-    font-weight: 500;
-    text-decoration: none; }
+    font-weight: bold;
+    text-decoration: underline; }
     .content-intro .content a:hover {
-      text-decoration: underline; }
-    .content-intro .content a span {
-      font-weight: 200; }
+      text-decoration: none; }
   .content-intro .content .button {
     color: #000;
     clear: both;
@@ -255,7 +253,7 @@ p {
     .content-quote .content {
       padding: 15px 28px; } }
   .content-quote .content .quote {
-    font-weight: 300;
+    font-weight: normal;
     font-size: 1.6vw;
     background-image: url("../images/assets/bg_quotation_left.png");
     background-position: left top;
@@ -299,7 +297,7 @@ p {
           background-size: 12px 8px;
           margin: 0; } }
   .content-quote .content .person {
-    font-weight: 200;
+    font-weight: normal;
     font-size: 1.2vw;
     position: absolute;
     bottom: 35px;
